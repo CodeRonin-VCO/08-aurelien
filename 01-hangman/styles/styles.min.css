@@ -1,0 +1,111 @@
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  scrollbar-gutter: stable;
+}
+
+body {
+  /* 4. Add accessible line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+  font-size: 1.6rem;
+}
+
+/* 6. Improve media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+/*
+  10. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+h1 {
+  margin: 2rem auto;
+  font-size: 6rem;
+  text-align: center;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+.container .zone-word, .container .zone-guess {
+  margin: 1rem 0;
+  padding: 3rem;
+  box-shadow: 0 0 0.5rem 0.3rem rgba(0, 0, 0, 0.25);
+}
+
+form {
+  width: 80%;
+  margin: auto;
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+form label, form input, form button {
+  width: 20%;
+  margin: 1rem 0;
+  padding: 0.5rem;
+  border-radius: 0.8rem;
+}
+form input, form button {
+  border: 0.1rem solid #333;
+}
+form button {
+  background-color: #FF4C4C;
+}
+form button:hover {
+  color: #fffff0;
+  background-color: #D32F2F;
+}
+
+.zone-chosen-letter {
+  width: 80%;
+  margin: 1rem auto;
+  padding: 3rem;
+  box-shadow: 0 0 0.5rem 0.3rem rgba(0, 0, 0, 0.25);
+}/*# sourceMappingURL=styles.min.css.map */
